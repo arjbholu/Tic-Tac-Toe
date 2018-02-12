@@ -2,8 +2,10 @@ import React from 'react'
 
 const Footer = ({completed, winner, reset}) => {
   return (
-    <div>
-      {winner}
+    <div className="footer">
+      <div>
+      {winner ? winner: ''}
+      </div>
       <button onClick={() => reset()}>Reset</button>
     </div>
   )
