@@ -4,3 +4,9 @@ export const changeState = (index) => {
     index
   }
 }
+
+export const reset = () => {
+  return {
+    type: 'RESET'
+  }
+}

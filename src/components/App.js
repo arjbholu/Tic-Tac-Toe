@@ -1,12 +1,12 @@
 import React from 'react'
 import BoardState from '../containers/BoardState'
-import Footer from './Footer'
+import FooterState from '../containers/FooterState'
 
 const App = () => {
   return (
     <div>
       <BoardState />
-      <Footer />
+      <FooterState />
     </div>
   )
 }
