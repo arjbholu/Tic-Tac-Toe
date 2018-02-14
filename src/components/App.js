@@ -7,9 +7,9 @@ import FooterState from '../containers/FooterState'
 const App = () => {
   return (
     <div className="container">
-      <Header />
+      <Header className="header" />
       <BoardState />
-      <FooterState />
+      <FooterState className="footer"/>
     </div>
   )
 }

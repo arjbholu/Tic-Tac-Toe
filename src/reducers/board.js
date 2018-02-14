@@ -49,9 +49,8 @@ const board = (state = initialState, action) => {
           ele = ['X', 'O'],
           winner = state.winner,
           arr = state.arr
-      
       // Checking If element is present or not
-      if(winner !== '' || arr[index] === 'X' || arr[index] === 'O')
+      if(winner !== '' || arr[index] === 'X' || arr[index] === 'O') 
         return state;
 
       // Assigning the Value to Array
@@ -61,13 +60,19 @@ const board = (state = initialState, action) => {
         ...state.arr.slice(index+1)
       ]
 
+      winner = checkWinner(arr)
+      
+      if (id === 8 && winner === '')
+        winner = "No one"
+        
       // Making the new State
       let newState = {
         ...state,
         arr: arr,
         id: id+1,
-        winner: checkWinner(arr)
+        winner
       }
+
       return newState;
     case 'RESET':
       return initialState
